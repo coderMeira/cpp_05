@@ -8,8 +8,6 @@
 #include <iostream>
 #include "ex02.hpp"
 
-class Bureaucrat;
-
 class Form {
 	public:
 		Form();
