@@ -6,16 +6,22 @@
 # define __FORM_HPP__
 
 #include <iostream>
-#include "Bureaucrat.hpp"
+#include "ex01.hpp"
+
+class Bureaucrat;
 
 class Form {
 	public:
 		Form();
+		Form(std::string name, int grade_to_sign, int grade_to_execute);
 		Form(const Form&);
 		~Form();
 		Form&	operator= (const Form&); // const for safety... not super nesessary
 
-		int					getGrade(void) const;
+		int					getGradeToSign(void) const;
+		int					getGradeToExecute(void) const;
+		bool				getSigned(void) const;
+		void				setSigned(const bool new_value	);
 		const std::string	getName(void) const;
 		void				beSigned(Bureaucrat&);
 

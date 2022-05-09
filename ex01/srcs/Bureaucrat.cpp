@@ -67,6 +67,19 @@ void	Bureaucrat::incrementGrade(void){
 		grade_--;
 }
 
+void	Bureaucrat::signForm(Form& formRef){
+	try{
+		formRef.beSigned(*this);
+		std::cout << "Bureaucrat " << name_ << " with a grade " << grade_
+				<< " succesfully signs " << formRef << std::endl;
+	}
+	catch (Form::Exception &e){
+		std::cout << "Bureaucrat " << name_ << " with a grade "
+				<< grade_ << " cannot sign " << formRef << " because "
+				<< e.what() << std::endl;
+	}
+}
+
 const char* Bureaucrat::Exception::what() const throw()
 {
 	return ("BureaucratException");

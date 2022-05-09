@@ -6,6 +6,8 @@
 # define __EX01_HPP__
 
 #include <iostream>
+#include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 /*
 # define BLACK	"\033[0;30m"

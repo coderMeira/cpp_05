@@ -6,6 +6,9 @@
 # define __BUREAUCRAT_HPP__
 
 #include <iostream>
+#include "ex01.hpp"
+
+class Form;
 
 class Bureaucrat {
 	public:
@@ -20,6 +23,7 @@ class Bureaucrat {
 		void				setGrade(const int);
 		void				incrementGrade(void);
 		void				decrementGrade(void);
+		void				signForm(Form&);
 
 		class Exception : public std::exception
 		{
