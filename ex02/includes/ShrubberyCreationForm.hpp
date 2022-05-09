@@ -8,8 +8,6 @@
 #include <iostream>
 #include "ex02.hpp"
 
-class Form;
-
 class ShrubberyCreationForm : public Form {
 	public:
 		ShrubberyCreationForm();

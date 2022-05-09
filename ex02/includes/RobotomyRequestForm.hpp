@@ -8,8 +8,6 @@
 #include <iostream>
 #include "ex02.hpp"
 
-class Form;
-
 class RobotomyRequestForm : public Form {
 	public:
 		RobotomyRequestForm();

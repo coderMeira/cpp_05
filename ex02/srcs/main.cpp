@@ -6,7 +6,7 @@
 
 int main (void)
 {
-	std::srand(std::time(0)); // common practice to seed the pseudo-random number generator
+	// std::srand(std::time(0)); // common practice to seed the pseudo-random number generator
 
 	// Constructors
 	std::cout << std::endl;
