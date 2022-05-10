@@ -2,7 +2,11 @@
 //*Template by pulgamecanica*//
 //***************************//
 
-#include "ex02.hpp"
+#include "Bureaucrat.hpp"
+#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main (void)
 {
@@ -33,7 +37,7 @@ int main (void)
 
 	std::cout << std::endl << "[UNSIGNED]" << std::endl;
 	bob.executeForm(shrub);
-	shrub.be_signed(bob);
+	shrub.beSigned(bob);
 
 
 	std::cout << std::endl << "[SIGNED]" << std::endl;
@@ -52,7 +56,7 @@ int main (void)
 	std::cout << "----------------------------" << std::endl;
 	std::cout << std::endl << "[UNSIGNED]" << std::endl;
 	bob.executeForm(robo);
-	robo.be_signed(bob);
+	robo.beSigned(bob);
 
 
 	std::cout << std::endl << "[SIGNED (50% failure chance)]" << std::endl;
@@ -77,7 +81,7 @@ int main (void)
 
 	std::cout << std::endl << "[UNSIGNED]" << std::endl;
 	bob.executeForm(president);
-	president.be_signed(bob);
+	president.beSigned(bob);
 
 
 	std::cout << std::endl << "[SIGNED]" << std::endl;

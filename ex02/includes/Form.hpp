@@ -6,7 +6,9 @@
 # define __FORM_HPP__
 
 #include <iostream>
-#include "ex02.hpp"
+#include <exception>
+
+class Bureaucrat;
 
 class Form {
 	public:
@@ -21,8 +23,8 @@ class Form {
 		bool				getSigned(void) const;
 		void				setSigned(const bool);
 		const std::string	getName(void) const;
-		void				beSigned(Bureaucrat&);
-		virtual void		execute(Bureaucrat const &) const = 0;
+		void				beSigned(Bureaucrat& b);
+		virtual void		execute(Bureaucrat const &b) const = 0;
 
 		class Exception : public std::exception
 		{
@@ -57,6 +59,7 @@ class Form {
 };
 
 std::ostream&	operator<<(std::ostream&, const Form&);
+#include "Bureaucrat.hpp"
 
 #endif
 
