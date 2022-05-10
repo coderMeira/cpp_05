@@ -6,7 +6,7 @@
 # define __FORM_HPP__
 
 #include <iostream>
-#include "Bureaucrat.hpp"
+#include <exception>
 
 class Bureaucrat;
 
@@ -15,15 +15,16 @@ class Form {
 		Form();
 		Form(std::string name, int grade_to_sign, int grade_to_execute);
 		Form(const Form&);
-		~Form();
+		virtual ~Form();
 		Form&	operator= (const Form&); // const for safety... not super nesessary
 
 		int					getGradeToSign(void) const;
 		int					getGradeToExecute(void) const;
 		bool				getSigned(void) const;
-		void				setSigned(const bool new_value	);
+		void				setSigned(const bool);
 		const std::string	getName(void) const;
-		void				beSigned(Bureaucrat&);
+		void				beSigned(Bureaucrat& b);
+		virtual void		execute(Bureaucrat const &b) const = 0;
 
 		class Exception : public std::exception
 		{
@@ -43,6 +44,12 @@ class Form {
 				virtual const char* what() const throw();
 		};
 
+		class UnsignedFormException : public Form::Exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+
 	private:
 		std::string	const	name_;
 		bool				signed_;
@@ -52,6 +59,7 @@ class Form {
 };
 
 std::ostream&	operator<<(std::ostream&, const Form&);
+#include "Bureaucrat.hpp"
 
 #endif
 
