@@ -3,14 +3,13 @@
 //***************************//
 
 #include "Bureaucrat.hpp"
+#include "ex00.hpp"
 
 int main(void)
 {
 	// Constructor with a bad grade
 	// -49
-	std::cout << std::endl;
-	std::cout << "CONSTRUCTING WITH GRADE -49:" << std::endl;
-	std::cout << "----------------------------" << std::endl;
+	std::cout << RED << "\t\t\n[ CONSTRUCTING WITH GRADE -49 ]\n\n" << ENDC;
 	try
 	{
 		Bureaucrat bill("Bill", -49);
@@ -19,13 +18,11 @@ int main(void)
 	{
 		std::cout << e.what();
 	}
-	std::cout << std::endl << std::endl;
-	//-------------------------------------------------------
+
+	std::cout << YELLOW << "\n\n****************************************************\n" << ENDC;
 
 	// 256
-	std::cout << std::endl;
-	std::cout << "CONSTRUCTING WITH GRADE 256:" << std::endl;
-	std::cout << "----------------------------" << std::endl;
+	std::cout << RED << "\t\t\n[ CONSTRUCTING WITH GRADE 256 ]\n\n" << ENDC;
 	try
 	{
 		Bureaucrat bill("Bill", 256);
@@ -34,14 +31,12 @@ int main(void)
 	{
 		std::cout << e.what();
 	}
-	std::cout << std::endl << std::endl;
-	//-------------------------------------------------------
+	std::cout << YELLOW << "\n\n****************************************************\n" << ENDC;
 
 	// Normal increment/decrement and "<<" overload
-	std::cout << std::endl;
-	std::cout << "IN/DECREMENT + \"<<\" overload:" << std::endl;
-	std::cout << "----------------------------" << std::endl;
+	std::cout << RED << "\t\t\n[ IN/DECREMENT + \"<<\" overload: ]\n\n" << ENDC;
 	Bureaucrat bob("Bob", 1);
+	std::cout << bob << std::endl;
 	try
 	{
 		bob.decrementGrade();
@@ -62,13 +57,11 @@ int main(void)
 	}
 	// "<<" operator overload used
 	std::cout << bob;
-	std::cout << std::endl << std::endl;
-	//-------------------------------------------------------
+	std::cout << YELLOW << "\n\n****************************************************\n" << ENDC;
 
 	// Increment 1 exception
-	std::cout << std::endl;
-	std::cout << "INCREMENT GRADE 1:" << std::endl;
-	std::cout << "----------------------------" << std::endl;
+	std::cout << RED << "\t\t\n[ INCREMENT GRADE 1 ]\n\n" << ENDC;
+	std::cout << bob << std::endl;
 	try
 	{
 		bob.incrementGrade();
@@ -77,14 +70,12 @@ int main(void)
 	{
 		std::cout << e.what();
 	}
-	std::cout << std::endl << std::endl;
-	//-------------------------------------------------------
+	std::cout << YELLOW << "\n\n****************************************************\n" << ENDC;
 
 	// Decrement 150 exception
-	std::cout << std::endl;
-	std::cout << "DECREMENT GRADE 150:" << std::endl;
-	std::cout << "----------------------------" << std::endl;
+	std::cout << RED << "\t\t\n[ DECREMENT GRADE 150 ]\n\n" << ENDC;
 	bob.setGrade(150);
+	std::cout << bob << std::endl;
 	try
 	{
 		bob.decrementGrade();
@@ -93,11 +84,8 @@ int main(void)
 	{
 		std::cout << e.what();
 	}
-	std::cout << std::endl << std::endl;
+	std::cout << YELLOW << "\n\n****************************************************\n" << ENDC;
 
-	//-------------------------------------------------------
-	std::cout << std::endl;
-	std::cout << "DESTRUCTORS:" << std::endl;
-	std::cout << "----------------------------" << std::endl;
+	std::cout << RED <<"\t\t\n[ DESTRUCTORS ]\n\n" << ENDC;
 	return (0);
 }
