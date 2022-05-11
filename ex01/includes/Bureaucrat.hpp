@@ -6,7 +6,6 @@
 # define __BUREAUCRAT_HPP__
 
 #include <iostream>
-#include "ex01.hpp"
 
 class Form;
 

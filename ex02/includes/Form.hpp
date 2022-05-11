@@ -23,8 +23,8 @@ class Form {
 		bool				getSigned(void) const;
 		void				setSigned(const bool);
 		const std::string	getName(void) const;
-		void				beSigned(Bureaucrat& b);
-		virtual void		execute(Bureaucrat const &b) const = 0;
+		void				beSigned(Bureaucrat&);
+		virtual void		execute(Bureaucrat const &) const = 0;
 
 		class Exception : public std::exception
 		{
