@@ -6,7 +6,7 @@
 # define __BUREAUCRAT_HPP__
 
 #include <iostream>
-
+#include "Form.hpp"
 class Form;
 
 class Bureaucrat {

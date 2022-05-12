@@ -22,9 +22,6 @@ int	main(void)
 	Form	*robo_form;
 	Form	*president_form;
 	Form	*unknown_form;
-	std::cout << std::endl << std::endl;
-	//-----------------------------------------------------
-
 
 	std::cout << std::endl;
 	std::cout << RED << "INTERN TESTS:" << ENDC << std::endl;
