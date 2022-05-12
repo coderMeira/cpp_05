@@ -51,7 +51,8 @@ void	Bureaucrat::setGrade(const int newGrade){
 	grade_ = newGrade;
 }
 
-void	Bureaucrat::decrementGrade(void){
+void	Bureaucrat::decrementGrade(void)
+{
 	std::cout << "Decrementing bureaucrat " << name_ << "'s grade " << grade_ << " by 1\n";
 	if (grade_ + 1 > 150)
 		throw (Bureaucrat::GradeTooLowException());
@@ -59,7 +60,8 @@ void	Bureaucrat::decrementGrade(void){
 		grade_++;
 }
 
-void	Bureaucrat::incrementGrade(void){
+void	Bureaucrat::incrementGrade(void)
+{
 	std::cout << "Incrementing bureaucrat " << name_ << "'s grade " << grade_ << " by 1\n";
 	if (grade_ - 1 < 1)
 		throw (Bureaucrat::GradeTooHighException());
@@ -67,8 +69,10 @@ void	Bureaucrat::incrementGrade(void){
 		grade_--;
 }
 
-void	Bureaucrat::signForm(Form& formRef){
-	try{
+void	Bureaucrat::signForm(Form& formRef)
+{
+	try
+	{
 		formRef.beSigned(*this);
 		std::cout << "Bureaucrat " << name_ << " with a grade " << grade_
 				<< " succesfully signs " << formRef << std::endl;

@@ -82,7 +82,7 @@ const std::string	Form::getName(void) const{
 void	Form::beSigned(Bureaucrat& bur){
 	int	grade = bur.getGrade();
 
-	if (grade > grade_to_sign_)
+	if (grade >= grade_to_sign_)
 	{
 		throw (Form::GradeTooLowException());
 		return ;
